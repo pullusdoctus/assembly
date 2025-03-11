@@ -1,0 +1,15 @@
+2025/03/11
+
+Architectures:
+  RISC -> ARM
+  CISC -> x86/64
+
+Tools to use:
+  nasm
+  c/c++
+  Linux
+
+Companies to look for:
+  Avyonix
+  WindRiver
+  West Monroe
