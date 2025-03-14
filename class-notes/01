@@ -13,3 +13,161 @@ Companies to look for:
   Avyonix
   WindRiver
   West Monroe
+
+2025/03/14
+
+Computer:
+Machine capable of executing a sequence of operations by means of a program, such that it processes a set of input data and returns output data.
+
+HISTORY OF COMPUTERS
+- The first computer is the abaccus, that satisfies a human need of counting. Properly, though, an abaccus is a computer precursor, since although it does process input into output, it lacks a program for this processing.
+- The Pascaline was a calculator invented by Blaise Pascal in the 17th century. This one, too, lacks a program.
+- Charles Babbage's analytical engine can be considered the first programmable computer. Alongside it is Babbage's difference engine.
+- Charles Jacquard's loom was a precursor to punch cards that were used by IBM in later computers.
+- The Mark I, built in 1944 at Harvard, was a mathematically programmable computer that iterated on Babbage's analytical engine. However, its programs weren't general purpose.
+
+== Important Characters ==
+John W. Mauchly & John Presper Eckert
+
+== ENIAC ==
+Electronic Numerical Integrator and Computer
+- Invented by Mauchly and Eckert at PennU
+- The first general-purpose, programmable electrical computer
+- Made to solve ballistics problems
+- aka "The Giant Brian"
+- x1000 faster than any other machine at the time
+- Worked half the time, with a MTBF of 8 hours
+- Programmed by women
+- Original cost: $500k (~$6Mill today)
+
+== EDVAC ==
+Electronic Discrete Variable Automatic Computer
+- By Mauchly and Eckert at PennU
+- Binary computer
+- Work starts before ENIAC was done
+- Iterated on ENIAC, addressing its issues
+- Available 20 hours a day
+- Functional half the time: MTBF of 8 hours
+- Memory of 44-bit 1000 words (6k)
+- 6000 vacuum tubes
+- 46m^2 of space, 56kW of energy
+- 30 people p/turn
+- Since it had memory, it could, unlike ENIAC, store programs in memory
+- John von Neumann worked as consultant
+- Original cost: $500k
+
+== John von Neumann ==
+- It's said he had eidetic memory
+- Original member of IAS at Princeton
+- Contributions:
+  . Computer architecture
+  . Computer science
+  . Operations research
+  . Game Theory
+  . Set Theory
+  . Physics
+  . Economy
+- Member of the Manhattan Project
+
+== First Draft ==
+- Published by von Neumann in 1945
+- First draft of the report on EDVAC
+- Von Neumann didn't credit Mauchly and Eckert
+
+== Von Neumann Architecture ==
+- Our modern architecture, proposed in 1945
+- A lot of modern tech is built on this architecture, even if it lacks a screen
+- It is said that it is based? on Turing's ideas
+- A novel idea was that the program lived in memory, as a set of instructions (first definition of software)
+- It had an I/O bus, and a memory bus
+- It defines the fetch cycle
+
+Input -> [CPU] -> Output
+          ^ v
+         memory
+
+[CPU] = | [Control Unit] |
+        |     [ALU]      |
+
+== Control Unit ==
+- Responsible of executing the fetch cycle
+  > Fetch Cycle
+    Retrieve from memory the next instruction. It does so with the Program Counter/Instruction Register.
+    1. Get next PC
+    2. Update PC
+    3. Decode instruction
+    4. Decode arguments (directioning modes)
+    5. Execute instruction
+    6. Check instructions' completion (important for OS/Kernel blocking)
+    7. GOTO 1
+- Design
+  > Establishes the 'machine language', or 'computer architecture' (interchangeable terms)
+  > Wired and microprogrammed design posibilities
+    -> Wired CU
+      . Implemented through logical gates, flip-flops, codifying and decodifying circuits, digital counters, multiplexors
+      . Every machine language instruction has a corresponding circuit (ad-hoc logic)
+      . Fixed architecture: to change the instruction set, a CU redesign is needed
+      . Faster and more efficient than microprogrammed CUs
+      . Not flexible at all
+      . Finite instruction set
+      . Instructions are sequentially ordered
+    -> Microprogrammed CU
+      . Developed by Sir Maurice Vincent Wilkes, one of the founders of Computer Science and Operations Research
+      . Sir Maurice contributed with the concept of 'subroutines' for FORTRAN
+      . Sir Maurice develops EDSAC (Electronic Delay Storage Automatic Computer), 1946-1958
+      . The machine language has an instruction set that can be used for microprogramming
+      . Microprograms call microinstructions, which call the actual instructions
+      . Has registers in a micromemory
+      . Easy to redesign, but slow and inefficient
+      . Microprogramming is a layer of abstraction above hardware, which is a wired CU
+      . Due to its modifiability, any software can be microprogrammed, even if it's a pain
+- Efficiency vs. Productivity
+  > The amount of resources required vs. The number of error-free lines of code produced
+- Machine language
+  > Defined by the architecture
+  > Easier than microprogramming
+  > Non-portable; architecture-dependant
+  > Programmer's responsibility
+    . Loading program on RAM
+    . Opcodes
+    . Directioning modes
+    . Arguments' format
+    . Calculation of sizes and jumps
+- Assembly language
+  > Programming in machine language was rather cumbersome and error-prone
+  > Invented in the 50s
+  > Program receives mnemonics and symbolic names, following a simple syntax, and generates machine language
+  > It calculates jumps
+  > Pseudo-instructions and macros
+  > Easier than machine language, but still not portable
+== The Big 4 ==
+- John Backus
+  > American, 1924-2007
+  > Turing Award, 1977
+  > Programmed machine language for IBM
+  > Calcd the Moon's positions using machine language
+  > Invented 'speed coding'
+  > Proposes FORTRAN
+    . Is it possible?
+    . Is it efficient?
+  > Creates BNF in 1958
+  > Creates FP in 1977
+- John McCarthy
+  > American, 1927-2011
+  > Turing Award, 1971
+  > MIT, Stanford, Princeton Professor
+  > AI Pioneer
+  > LISP, ALGOL creator
+  > Coins 'garbage collection'
+- Grace M. Hopper
+  > American, 1906-1992
+  > Posthumous Turing Award
+  > US Admiral
+  > First female high-level programmer
+  > Defines 'compiler'
+  > COBOL creator
+  > Coins 'bug', 'debugging'
+- Peter Naur
+  > Danish, 1928-2016
+  > Turing Award
+  > Modifies BNF and improves it
